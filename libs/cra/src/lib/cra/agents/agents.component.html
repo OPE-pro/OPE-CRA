@@ -1,0 +1,12 @@
+@if (store.isLoading()) { loading agents list... } @else {
+<div class="grid grid-cols-1 gap-4 md:grid-cols-3 my-8 m-4">
+  @for (agent of store.agents(); track agent.id) {
+  <a
+    [routerLink]="['../cra', agent.agentCodeName]"
+    class="block bg-ggvieMain-500 hover:bg-ggvieMain-700 font-bold text-white text-center py-6 rounded-lg shadow-lg"
+  >
+    {{ agent.name }}
+  </a>
+  }
+</div>
+}

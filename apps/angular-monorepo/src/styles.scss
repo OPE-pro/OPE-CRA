@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: light dark;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$violet-palette,
+        tertiary: mat.$orange-palette,
+        theme-type: light,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
+button.mission-1 {
+  @apply bg-mission1Color;
+  border-radius: 100%;
+}
+button.mission-2 {
+  @apply bg-mission2Color;
+  border-radius: 100%;
+}
+button.mission-3 {
+  @apply bg-mission3Color;
+  border-radius: 100%;
+}
+
+button.holiday {
+  @apply bg-holidayColor;
+
+  border-radius: 100%;
+}

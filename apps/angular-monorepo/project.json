@@ -22,7 +22,8 @@
             "input": "apps/angular-monorepo/public"
           }
         ],
-        "styles": ["apps/angular-monorepo/src/styles.scss"],
+        "styles": ["apps/angular-monorepo/src/styles.scss", "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+      ],
         "scripts": []
       },
       "configurations": {
