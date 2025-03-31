@@ -10,9 +10,9 @@ choix technique: Material/TailwindCss/NgrxSignalStore/NX
 - La gestion d'état utilise NGRX Signal Store au niveau des composants, et non NGRX Redux au niveau de l'application, car cela aurait été un peu over kill pour ce projet.
 - L'UI est très basique, réalisée avec Material et TailwindCSS pour rester classique. L'UI pourrait être grandement améliorée !
 - Le principe KISS a été suivi.
-- OnPush checnge detection
+- OnPush change detection for all components
 - Pas persistance des données (même pas en locaStorage!) 
-- Le projet aurait pu être beaucoup plus générique et avec bien plus de règles de gestions. J'ai donc collé aux 'specs' :) Seul le nombe d'agents a été rendu 'générique' et non pas forcément au nombre de 3. 
+- Le projet aurait pu être beaucoup plus générique et avec bien plus de règles de gestions. J'ai collé aux 'specs' :) Seul le nombe d'agents a été rendu 'générique' et non pas forcément seulement au nombre de 3. 
 - Utilisation du datepicker d'Angular Material pour la gestion du calendrier et non d'une librairie JS spécifique de calendar. C'est pas le choix le plus user friendly mais ça fonctionne. Une lib tièrce pour gérer les calendriers aurait facilité l'UI/UX mais y'a le sujet des licences... 
 - utilisation de NX, projet mono repo, avec juste 1 lib 'CRA'.
 
