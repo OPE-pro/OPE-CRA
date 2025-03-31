@@ -23,8 +23,9 @@ export class CraComponent {
   public firstDayOfCurrent = startOfMonth(new Date());
   public nextOneMonth = addMonths(new Date(), 1);
   public nextTwoMonth = addMonths(new Date(), 2);
-  showThreeMonthview = signal(false);
+  public showThreeMonthview = signal(false);
 
+  // Highlight the days present in the imputations array with a specific css class depending on the missionName.
   dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
     // Only highligh dates inside the month view.
     if (view === 'month') {
@@ -57,15 +58,24 @@ export class CraComponent {
   }
 
   setDay(missionName: MissionName): void {
-    this.store.setDayWorked(missionName, this.selected()!);
+    const selectedDate = this.selected();
+    if (selectedDate) {
+      this.store.setDayWorked(missionName, selectedDate);
+    }
   }
 
   setHoliday(): void {
-    this.store.setHoliday(this.selected()!);
+    const selectedDate = this.selected();
+    if (selectedDate) {
+      this.store.setHoliday(selectedDate);
+    }
   }
 
   removeImputationDay(): void {
-    this.store.removeImputationDay(this.selected()!);
+    const selectedDate = this.selected();
+    if (selectedDate) {
+      this.store.removeImputationDay(selectedDate);
+    }
   }
 
   onTabChange(event: any) {
