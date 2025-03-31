@@ -15,5 +15,5 @@ export type Imputation = {
 export type Agent = {
   id: number;
   name: string;
-  agentCodeName: string;
+  agentCodeName: string; // identifier path parameter for the agent
 }
