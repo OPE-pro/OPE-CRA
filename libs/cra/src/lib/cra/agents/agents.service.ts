@@ -1,14 +1,10 @@
-
-
 import { Injectable } from '@angular/core';
 import { Agent } from '../cra.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AgentsService {
-
-
   private mockAgents = [
     { id: 1, name: 'Alpha', agentCodeName: 'alpha' },
     { id: 2, name: 'Béta', agentCodeName: 'beta' },

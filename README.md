@@ -5,13 +5,14 @@ Voici le projet concernannt la saisie des CRAs des agents.
 
 choix technique: Material/TailwindCss/NgrxSignalStore/NX
 
-A noter que 
+À noter que 
 
-- state management utilisant NGRX Signal Store au niveau des components, pas de NGRX REDUX au niveau de l'application, un peu overkill pour ce projet.
-- UI très basique avec material et tailwindcss pour rester classique. UI qui pourrait être grandement améliorer !
-- principe KISS suivi.
-- le projet aurtait pu être beaucoup plus générique et avec bcp plus de règles de gestions. J'ai donc collé aux 'specs' :) Seul le nombe d'agents a été rendu 'générique' et non pas forcément au nombre de 3. 
-- utilisation du datepicker d'Angular Material pour la gestion du calendrier et non d'une librairie JS spécifique Calendar. C'est pas le choix le plus user friendly mais ça fonctionne. Une lib tièrce pour gérer les calendriers aurait facilité l'UI/UX mais y'a le sujet des licences... 
+- La gestion d'état utilise NGRX Signal Store au niveau des composants, et non NGRX Redux au niveau de l'application, car cela aurait été un peu over kill pour ce projet.
+- L'UI est très basique, réalisée avec Material et TailwindCSS pour rester classique. L'UI pourrait être grandement améliorée !
+- Le principe KISS a été suivi.
+- Pas persistance des données (même pas en locaStorage!) 
+- Le projet aurait pu être beaucoup plus générique et avec bien plus de règles de gestions. J'ai donc collé aux 'specs' :) Seul le nombe d'agents a été rendu 'générique' et non pas forcément au nombre de 3. 
+- Utilisation du datepicker d'Angular Material pour la gestion du calendrier et non d'une librairie JS spécifique de calendar. C'est pas le choix le plus user friendly mais ça fonctionne. Une lib tièrce pour gérer les calendriers aurait facilité l'UI/UX mais y'a le sujet des licences... 
 - utilisation de NX, projet mono repo, avec juste 1 lib 'CRA'.
 
 ## Run tasks
@@ -21,6 +22,14 @@ To run the dev server for your app, use:
 ```sh
 npx nx serve angular-monorepo
 ```
+
+
+To run unit tests aginst CRA library, use:
+
+```sh
+npx nx run cra:test
+```
+ 
 
 To see all available targets to run for a project, run:
 

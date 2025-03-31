@@ -12,5 +12,5 @@
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
-  ]
+, "src/lib/cra/agents/agents.store.specfsdfsdfsdf.ts", "src/lib/cra/agents/agents.component.specddd.ts"  ]
 }

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CraComponent } from './cra.component';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { addDays, startOfMonth } from 'date-fns';
 
 
   describe('CraComponent', () => {
@@ -69,4 +70,28 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 
       expect(holiday).toBeTruthy();
     });
+
+    it('should set two holidays in the imputations array when setHoliday is called twice', () => {
+      const selectedDate = new Date();
+      component.selected.set(selectedDate);
+      component.setHoliday();
+
+      component.selected.set(addDays(selectedDate, 1));
+      component.setHoliday();
+
+
+      expect( component.store.holidaysCount()).toBe(2);
+    });
+
+    it('should not set more than 7 holidays in the imputations array when setHoliday is called 8 times', () => {
+      const selectedDate =  startOfMonth(new Date());
+      for (let i = 0; i < 10; i++) {
+        component.selected.set(addDays(selectedDate, i));
+        component.setHoliday();
+
+      }
+      expect( component.store.holidaysCount()).toBe(7);
+    });
+
+
   });

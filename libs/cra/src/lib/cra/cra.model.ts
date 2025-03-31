@@ -1,9 +1,7 @@
 export type Cra = {
   agentCodeName:string;
-  missionNames?:MissionName[];
   imputations:Imputation[];
   description?:string;
-  completed?:boolean;
 }
 
 export type MissionName = 'Holiday' | 'Mission 1' | 'Mission 2' | 'Mission 3';

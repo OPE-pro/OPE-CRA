@@ -1,6 +1,6 @@
 # cra
 
-This library was generated with [Nx](https://nx.dev).
+Cette library gère la liste des agents ainsi que le CRUD des CRAs de chaques agents.
 
 ## Running unit tests
 
